@@ -7,7 +7,7 @@ function listStuff() {
      // DON'T   USE innerHTML +, use innterHTML = ... don't use inner HTML at all here
   }
 };
-listStuff();
+listStuff(); // Should I move this down   ??????????
 
 $("button").on("click", function() {
   var animals = $(this).attr('id');
@@ -21,9 +21,7 @@ $("button").on("click", function() {
   $.ajax({
     url: queryURL,
     method: "GET"
-  })
-
-    .then(function(response) {
+  }).then(function(response) {
       var results = response.data;
       console.log(response);
 
@@ -35,18 +33,25 @@ $("button").on("click", function() {
         // Gives it the src attribtute with the reuslts from above and...
         console.log( results[i].images.fixed_height.url);
 
-        topicImage.attr("src", results[i].images.fixed_height.url).addClass("m-1 border border-light");
+        topicImage.attr("src", results[i].images.fixed_height.url).addClass("border border-light");
 
-        
         // Put it inside the empty div in the HTML...
-       // topicImage.append($("#gifs-here"));
-        $("#gifs-here").append(topicImage);
-        $("#gifs-here").append(pOne);
-
-
+        $("#gifs-here").prepend(topicImage);
+        $("#gifs-here").prepend(pOne);
       }
     });
 });
 
-///get search box to APPEND to the array, whatever you type in.
-/// 
+// Adding things to the button array via the ADD input box
+$("#add-movie").on("click", function(event) {
+  $("#buttons-view").empty();  //This is supposed to empty the div and apply the new ones but it just duplicates!!!!
+  
+  event.preventDefault();
+  var movie = $("#movie-input").val().trim();
+  topics.push(movie);
+  listStuff(); //not sure about this name... might be "event"... not working
+
+  console.log(listStuff);
+});
+
+$(document).on("click", ".add-movie", listStuff);
