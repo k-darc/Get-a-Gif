@@ -44,14 +44,13 @@ $("button").on("click", function() {
 
 // Adding things to the button array via the ADD input box
 $("#add-movie").on("click", function(event) {
-  $("#buttons-view").empty();  //This is supposed to empty the div and apply the new ones but it just duplicates!!!!
-  
+ // $("#buttons-view").empty();  //This is supposed to empty the div and apply the new ones but it just duplicates!
   event.preventDefault();
   var movie = $("#movie-input").val().trim();
   topics.push(movie);
-  listStuff(); //not sure about this name... might be "event"... not working
+  console.log("you typed " + movie);
+  //listStuff();   removing this stops duplication, but nothing appears...
 
-  console.log(listStuff);
 });
 
-$(document).on("click", ".add-movie", listStuff);
+$(document).on("click", ".add-movie", topics); //make "topics" itself or "listStuff", does the same thing...
