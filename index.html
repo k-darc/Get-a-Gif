@@ -7,20 +7,23 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
 <link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Fredoka+One|Righteous&display=swap" rel="stylesheet">
 <title>Title</title>
 </head>
 <body>
+        <div id="heading">Get-a-Gif</div>
         <form id="theForm">
-                <label for="movie-input">Add an animal! </label>
+                
+                <label for="movie-input"></label>
 
-                <input type="text" placeholder=" Type here..." id="movie-input">
-
-                <input id="add-movie" type="submit" value="Add">
+                <input type="text" placeholder=" Type here..." id="movie-input" onfocus="this.value=''" value="">
+                <input id="add-movie" type="submit" value="Add Your Gif">
         </form>
         <br>
         <div id="buttons-here"></div>
         <hr>
         <div id="gifs-here"></div>
+        
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="javascript/app.js"></script>
