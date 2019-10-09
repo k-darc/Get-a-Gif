@@ -80,7 +80,8 @@ $(document).on('click', '.add-movie', topics);
 
 // ---------------- Pausing Gifts ---------
 
-$(".gif").on("click", '.giffy', function() {
+$("#gifs-here").on("click", ".giffy", function() {
+  console.log("SAFHASEOIHFOIEH00");
   var state = $(this).attr("data-state");
 
   if (state === "still") {
