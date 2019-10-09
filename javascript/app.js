@@ -10,6 +10,7 @@ var topics = [
   'chipmunks',
   'pikachu'
 ];
+
 function listStuff() {
   // empty buttons here
   $('#buttons-here').empty();
@@ -23,7 +24,7 @@ function listStuff() {
 listStuff();
 
 // have to bind click event to the document because some buttons are dynamically created after the DOM has been loaded
-$("#buttons-here").on('click', 'button', function() {
+$("#buttons-here").on('click', 'button', function () {
   var animals = $(this).attr('id');
   console.log($(this).attr('id'));
   // grabbing the urls with the correct topic(animal)...
@@ -36,7 +37,7 @@ $("#buttons-here").on('click', 'button', function() {
   $.ajax({
     url: queryURL,
     method: 'GET'
-  }).then(function(response) {
+  }).then(function (response) {
     var results = response.data;
     console.log(response);
     for (var i = 0; i < results.length; i++) {
@@ -67,7 +68,7 @@ $("#buttons-here").on('click', 'button', function() {
 });
 
 
-$('#add-movie').on('click', function(event) {
+$('#add-movie').on('click', function (event) {
   event.preventDefault();
   var movie = $('#movie-input')
     .val()
@@ -78,9 +79,9 @@ $('#add-movie').on('click', function(event) {
 });
 $(document).on('click', '.add-movie', topics);
 
-// ---------------- Pausing Gifts ---------
+// ---------------- Pausing Gifs ---------
 
-$("#gifs-here").on("click", ".giffy", function() {
+$("#gifs-here").on("click", ".giffy", function () {
   console.log("SAFHASEOIHFOIEH00");
   var state = $(this).attr("data-state");
 
