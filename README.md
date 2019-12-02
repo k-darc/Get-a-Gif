@@ -4,8 +4,8 @@ Giphy is a responsive, dynamic web app that uses the Giphy API to populate the p
 
 ### Technologies used
 [Giphy API](https://developers.giphy.com/docs/).
-Javascript
-jQuery
+Javascript.
+jQuery.
 
 ### Installation
 Simply run the index.html or follow the link below.
