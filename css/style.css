@@ -1,9 +1,3 @@
-/*
-font-family: 'Righteous', cursive;
-font-family: 'Alfa Slab One', cursive;
-font-family: 'Fredoka One', cursive;
-*/
-
 @import url("reset.css");
 body {
     background-image: linear-gradient(90deg, rgb(78, 190, 255), rgb(215, 238, 248));

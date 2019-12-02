@@ -1,4 +1,3 @@
-// This is making buttons = to the names and length of the array...
 var topics = [
   'dogs',
   'cats',
@@ -18,16 +17,16 @@ function listStuff() {
     $('#buttons-here').append(
       '<button id="' + topics[i] + '">' + topics[i] + '</button>'
     );
-    // DON'T   USE innerHTML +, use innterHTML = ... don't use inner HTML at all here
+ 
   }
 }
 listStuff();
 
-// have to bind click event to the document because some buttons are dynamically created after the DOM has been loaded
+
 $("#buttons-here").on('click', 'button', function () {
   var animals = $(this).attr('id');
   console.log($(this).attr('id'));
-  // grabbing the urls with the correct topic(animal)...
+
   var queryURL =
     'https://api.giphy.com/v1/gifs/search?q=' +
     animals +
@@ -42,13 +41,13 @@ $("#buttons-here").on('click', 'button', function () {
     console.log(response);
     for (var i = 0; i < results.length; i++) {
 
-      // This makes an img tag and...
+      // Creates an img tag
       var topicImage = $('<img>');
       var pOne = $('<p>').text('Rating: ' + results[i].rating);
       var gifDiv = $("<div>");
 
 
-      // Gives it the src attribtute with the reuslts from above and...
+      // Gives it the src attribtute with the reuslts from above
       console.log(results[i].images.fixed_height_still.url);
       topicImage
         .attr('src', results[i].images.fixed_height_still.url)
@@ -59,7 +58,6 @@ $("#buttons-here").on('click', 'button', function () {
       topicImage.attr("data-animate", results[i].images.fixed_height.url);
       topicImage.attr("data-still", results[i].images.fixed_height_still.url);
 
-      // Put it inside the empty div in the HTML...
       gifDiv.prepend(pOne);
       gifDiv.append(topicImage);
       $('#gifs-here').prepend(gifDiv);
@@ -80,7 +78,6 @@ $('#add-movie').on('click', function (event) {
 $(document).on('click', '.add-movie', topics);
 
 // ---------------- Pausing Gifs ---------
-
 $("#gifs-here").on("click", ".giffy", function () {
   console.log("SAFHASEOIHFOIEH00");
   var state = $(this).attr("data-state");
