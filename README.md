@@ -9,6 +9,7 @@ Giphy is a responsive, dynamic web app that uses the Giphy API to populate the p
 
 ### Installation
 Simply run the index.html or follow the link below.
+[Get-a-Gif](https://k-darc.github.io/Get-a-Gif/).
 
 ### How to use?
 1. Click on any button to display gifs relating its topic.
