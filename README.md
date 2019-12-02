@@ -1,37 +1,23 @@
-## GIPHY - 
-A little info about your project and/ or overview that explains **what** the project is about.
+# Get-a-Gif
 
-## Motivation
-A short description of the motivation behind the creation. This should cover **why** the project exists and what drove you to choose this project.
+Giphy is a responsive, dynamic web app that uses the Giphy API to populate the page with gifs of your choice.
 
-## Technologies used and why
-Ex. -
+### Technologies used
+[Giphy API](https://developers.giphy.com/docs/).
+Javascript
+jQuery
 
-<b>Built with</b>
-- [React](https://reactjs.org/)
-<b>is a lightweight front end library that allowed me to create highly reusable components I could use across my application<b>
+### Installation
+Simply run the index.html or follow the link below.
 
-## Features
-What makes your project stand out?
+### How to use?
+1. Click on any button to display gifs relating its topic.
+    * Additionally; you can type in the input field to search for any other gifs. 
 
-## Screenshots
-Include logo/demo screenshot etc.
+2. After searching, a new button will populate accordingly, along with an image rating.
 
-## Code Example
-Show what your project does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+3. Click each image to start/stop the gif.
 
-## Installation
-Provide step by step series of examples and explanations about how to get a development env running.
+### Credits
+Created by Kevin Darcy, 2019 - For Rutgers Coding Bootcamping, J. Han's class.
 
-## How to use?
-If people like your project they’ll want to learn how they can use it. To do so include step by step guide to use your project.
-
-## Credits
-Give proper credits. This could be a link to any repo which inspired you to build this project, any blogposts or links to people who contrbuted in this project. 
-
-#### Anything else that seems useful
-
-## License
-A short snippet describing the license (MIT, Apache etc)
-
-MIT © [Yourname]()
